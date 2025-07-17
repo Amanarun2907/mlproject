@@ -16,54 +16,9 @@ python -m venv .venv
 
 ## Step 4 : Make a setup.py file in the root directory.
 
-from setuptools import find_packages,setup
-
-from typing import List
-
-HYPEN_E_DOT='-e .'
-
-def get_requirements(file_path:str)->List[str]:
-
-    '''
-
-    this function will return list of requirements
-
-    '''
-
-    requirements=[]
-
-    with open(file_path) as file_obj:
-
-        requirements=file_obj.readlines()
-
-        requirements=[req.replace("\n","") for req in requirements]
-        
-        if HYPEN_E_DOT in requirements:
-
-            requirements.remove(HYPEN_E_DOT)
-
-    return requirements
-
-setup(
-
-    name  = 'mlproject',
-
-    version = '0.0.1',
-
-    author = "AJ",
-
-    author_email='aman.jain.23cse@bmu.edu.in',
-
-    packages = find_packages(),
-
-    install_requires= get_requirements('requirements.txt')
-
-)
-
-run it by python setup.py
-
 ## Step 5 : Make a src folder in the root directory and create an __init__.py file inside that folder. 
 
+## Step 6 : Make a file of logging and exeception handling in the src folder by logging.py and exception.py files respectively. and run them using these commands : python src/log_config.py and python src/exception.py 
 
 
 
