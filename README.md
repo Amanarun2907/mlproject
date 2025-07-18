@@ -20,5 +20,6 @@ python -m venv .venv
 
 ## Step 6 : Make a file of logging and exeception handling in the src folder by logging.py and exception.py files respectively. and run them using these commands : python src/log_config.py and python src/exception.py 
 
+##  Step 7 : Here we have to upload the dataset in data folder and doing the part of model training and eda part in notebook folder under the .ipynb file. 
 
 
