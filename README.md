@@ -24,4 +24,6 @@ python -m venv .venv
 
 ## Step 8 : Now here we have to work on the data ingestion part so for this we have to create a new file named as data_ingestion.py in the src folder and then write all the code related to data ingestion there.
 
+## Step 9 : Now we will work on the data_transformation part so for this we have to create a new file named as data_transformation.py in the src folder and then write all the code related to data transformation there.
+
 
