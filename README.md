@@ -29,3 +29,4 @@ python -m venv .venv
 
 ## Step 10 : Now we will work on the model_trainer part so for this we have to create a new file named as model_trainer.py in the src folder and then write all the code related to model trainer there.
 
+## Step 11 : Hyper Parameter part of the Model is taking place in this step and we have made changes in src/utils.py file , src/components/data_ingestion.py and src/components/model_trainer.py files accordingly.
