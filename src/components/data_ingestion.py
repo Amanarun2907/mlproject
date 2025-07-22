@@ -4,7 +4,7 @@ import sys ## system module
 from src.exception import CustomException ## exception handling 
 from src.log_config import logging ## log config file
 import pandas as pd ## pandas 
-# import numpy as np ## numpy
+import numpy as np ## numpy
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
@@ -26,19 +26,19 @@ class DataIngestion:
     def initiate_data_ingestion(self): ## function 
         logging.info("Entered the data ingestion method or component")
         try:
-            df=pd.read_csv('Notebook\data\stud.csv')
+            df=pd.read_csv('Notebook\data\stud.csv') ## reading the local csv file  
             logging.info('Read the dataset as dataframe')
 
-            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
+            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True) ## creating the directory if not exists (artifacts folder)
 
-            df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
+            df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True) ## saving the raw data 
 
             logging.info("Train test split initiated")
-            train_set,test_set=train_test_split(df,test_size=0.2,random_state=42)
+            train_set,test_set=train_test_split(df,test_size=0.2,random_state=42) ## train test split
 
-            train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True)
+            train_set.to_csv(self.ingestion_config.train_data_path,index=False,header=True) ## saving the training file 
 
-            test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
+            test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True) ## saving the testing file 
 
             logging.info("Inmgestion of the data is completed")
 
@@ -47,7 +47,7 @@ class DataIngestion:
                 self.ingestion_config.test_data_path
 
             )
-        except Exception as e:
+        except Exception as e: ## use of exception handling
             raise CustomException(e,sys)
         
 if __name__=="__main__":

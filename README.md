@@ -22,4 +22,6 @@ python -m venv .venv
 
 ##  Step 7 : Here we have to upload the dataset in data folder and doing the part of model training and eda part in notebook folder under the .ipynb file. 
 
+## Step 8 : Now here we have to work on the data ingestion part so for this we have to create a new file named as data_ingestion.py in the src folder and then write all the code related to data ingestion there.
+
 
