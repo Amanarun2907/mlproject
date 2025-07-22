@@ -8,4 +8,8 @@ xgboost
 dill
 catboost
 dataclasses
+flask
+streamlit
+joblib
+
 #-e .
