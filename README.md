@@ -27,3 +27,5 @@ python -m venv .venv
 ## Step 9 : Now we will work on the data_transformation part so for this we have to create a new file named as data_transformation.py in the src folder and then write all the code related to data transformation there.
 
 
+## Step 10 : Now we will work on the model_trainer part so for this we have to create a new file named as model_trainer.py in the src folder and then write all the code related to model trainer there.
+
