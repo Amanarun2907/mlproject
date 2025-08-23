@@ -12,4 +12,4 @@ flask
 streamlit
 joblib
 
-#-e .
+#-e . this wil automatically trigger the setup.py file and install all the dependencies mentioned in setup.py file

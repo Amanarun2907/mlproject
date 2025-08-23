@@ -1,6 +1,15 @@
 ## End to End Machine learning project 
 
-## Step 1 :Setting virtual environment
+if you are doing first time then please also pay attention to the git configuration (github username and github email )
+
+git config --global user.email
+
+
+
+## Step 1 : Set up a github repository environment 
+
+
+## Step 2 :Setting virtual environment
 
 pip install virtualenv
 
@@ -8,13 +17,18 @@ python -m venv .venv
 
 .venv\Scripts\activate
 
-## Step 2 : Create github repository and add a relation of github with local machine. and also make a README.md file in it.
+## Step 3 : Creating a  README.md file where you can write your discription and important point regarding the project . 
 
-## Step 3 : Make a .gitignore file in the github repository itself . 
+
+## Step 4 : Create github repository and add a relation of github with local machine. and also make a README.md file in it.
+
+## Step 5  : Make a .gitignore file in the github repository itself .  .gitignore file is created by github platform and use git pull command 
 
 ## Step 3 : Make a requirements.txt file in the root directory.
 
-## Step 4 : Make a setup.py file in the root directory.
+pip install -r requirements.txt
+
+## Step 4 : Make a setup.py file in the root directory. https://pypy.org/ . With the help of setup.py i will able to build  my ml application  as a package  and even deploy in pypy . 
 
 ## Step 5 : Make a src folder in the root directory and create an __init__.py file inside that folder. 
 
