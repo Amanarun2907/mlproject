@@ -17,3 +17,7 @@ logging.basicConfig(
 
 # if __name__=="__main__":
 #     logging.info("Logging has started")
+
+
+# Logging in Python is a crucial practice for tracking events, debugging, and monitoring the behavior of applications. 
+# Python provides a built-in logging module in its standard library, offering a flexible and powerful framework for emitting log messages.

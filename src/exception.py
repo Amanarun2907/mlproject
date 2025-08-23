@@ -30,3 +30,6 @@ if __name__=="__main__":
         logging.info("Divide by zero")
         raise CustomException(e,sys)
     
+    
+# In Python, "custom handling" often refers to creating and managing custom exceptions, which are user-defined error types that allow for more specific and organized error handling within an application.
+    

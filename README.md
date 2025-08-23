@@ -40,7 +40,26 @@ pip install -r requirements.txt
 
 logging is done in log_config.py and custom handling is done in exception.py file and it helps us to show the message regarding custom exeception and logging 
 
+Logging : src/log_config.py file is used 
+exception : src/exception.py file is used 
+
 ##  Step 7 : Here we have to upload the dataset in data folder and doing the part of model training and eda part in notebook folder under the .ipynb file. 
+
+notebook/data/dataset 
+
+#### Life cycle of Machine learning Project
+
+- Understanding the Problem Statement
+- Data Collection
+- Data Checks to perform
+- Exploratory data analysis
+- Data Pre-Processing
+- Model Training
+- Choose best model
+
+- performing exploratory data analysis part and model training here 
+
+- all the steps of exploratory data analysis and model training is done is .ipynb file and then later we will convert it in modular coding .
 
 ## Step 8 : Now here we have to work on the data ingestion part so for this we have to create a new file named as data_ingestion.py in the src folder and then write all the code related to data ingestion there.
 
