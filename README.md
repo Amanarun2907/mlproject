@@ -32,7 +32,13 @@ pip install -r requirements.txt
 
 ## Step 5 : Make a src folder in the root directory and create an __init__.py file inside that folder. 
 
-## Step 6 : Make a file of logging and exeception handling in the src folder by logging.py and exception.py files respectively. and run them using these commands : python src/log_config.py and python src/exception.py 
+1st folder of src folder  : components : data_ingestion.py (reading the data) / data_transformation.py (for data transformation) / model_trainer.py (confusion matriz / r^2 or adjusted r^2 value / training purpose) . modules that we use in our project 
+
+2nd folder of src folder  : pipeline : train_pipeline.py (training pipeline) / predict_pipeline.py (testing pipeline)
+
+## Step 6 : Make a file of logging and exeception handling in the src folder by logging.py and exception.py files respectively. and run them using these commands : python src/log_config.py and python src/exception.py and src/utils.py
+
+logging is done in log_config.py and custom handling is done in exception.py file and it helps us to show the message regarding custom exeception and logging 
 
 ##  Step 7 : Here we have to upload the dataset in data folder and doing the part of model training and eda part in notebook folder under the .ipynb file. 
 

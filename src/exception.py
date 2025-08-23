@@ -1,14 +1,16 @@
-import sys
+import sys ## sys is the library which will help us to get the information about the exception that has occured
 import logging
 from datetime import datetime
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.log_config import logging
 def error_message_detail(error,error_detail:sys):
+    ## costom exeception handling .............
     _,_,exc_tb=error_detail.exc_info()
     file_name=exc_tb.tb_frame.f_code.co_filename
     error_message="Error occured in python script name [{0}] line number [{1}] error message[{2}]".format(
     file_name,exc_tb.tb_lineno,str(error))
+    ## file name , line number and error message 
     return error_message
     
     
