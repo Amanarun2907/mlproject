@@ -78,6 +78,9 @@ src/components/model_trainer.py  is used for model training and evaluation and a
 
 ## Step 11 : Hyper Parameter part of the Model is taking place in this step and we have made changes in src/utils.py file , src/components/data_ingestion.py and src/components/model_trainer.py files accordingly.
 
+- for hyperparameter tunning we actually focus on the two file 
+src/components/model_trainer.py and src/components/utils.py
+
 ## Step 12 : Now we use flask to make an application and work on the predict_pipeline also and if we are using flask then we have to make templates folder too . 
 
 

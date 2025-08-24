@@ -46,18 +46,21 @@ class ModelTrainer:
                 "CatBoosting Regressor": CatBoostRegressor(verbose=False),
                 "AdaBoost Regressor": AdaBoostRegressor()
             }
-            params={
+            params={ ## hyperparameter tunning
+                ## model : decision tree 
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                     # 'splitter':['best','random'],
                     # 'max_features':['sqrt','log2'],
                 },
+                ## model : random forest 
                 "Random Forest":{
                     # 'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                  
                     # 'max_features':['sqrt','log2',None],
                     'n_estimators': [8,16,32,64,128,256]
                 },
+                ## model : gradient boosting 
                 "Gradient Boosting":{
                     # 'loss':['squared_error', 'huber', 'absolute_error', 'quantile'],
                     'learning_rate':[.1,.01,.05,.001],
@@ -66,16 +69,20 @@ class ModelTrainer:
                     # 'max_features':['auto','sqrt','log2'],
                     'n_estimators': [8,16,32,64,128,256]
                 },
+                ## model : linear regression
                 "Linear Regression":{},
+                ## model : XGBRegressor
                 "XGBRegressor":{
                     'learning_rate':[.1,.01,.05,.001],
                     'n_estimators': [8,16,32,64,128,256]
                 },
+                ## model : CatBoosting Regressor
                 "CatBoosting Regressor":{
                     'depth': [6,8,10],
                     'learning_rate': [0.01, 0.05, 0.1],
                     'iterations': [30, 50, 100]
                 },
+                ## model : AdaBoost Regressor
                 "AdaBoost Regressor":{
                     'learning_rate':[.1,.01,0.5,.001],
                     # 'loss':['linear','square','exponential'],

@@ -5,7 +5,7 @@ import pandas as pd
 from src.exception import CustomException
 import dill
 from sklearn.metrics import r2_score
-from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import GridSearchCV ## for hyperparameter tunning
 def save_object(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)
@@ -25,7 +25,8 @@ def evaluate_models(X_train, y_train,X_test,y_test,models ,param):
             model = list(models.values())[i]
             para=param[list(models.keys())[i]]
 
-            gs = GridSearchCV(model,para,cv=3)
+            gs = GridSearchCV(model,para,cv=3) ##GridSearchCV is used for hyperparameter tunning
+            ## cv is the cross validation parameter here i have taken 3 fold cross validation , para = parameter , model = model name
             gs.fit(X_train,y_train) ## model fitting 
 
             model.set_params(**gs.best_params_) ## set the best parameters
