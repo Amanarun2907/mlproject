@@ -71,6 +71,11 @@ src/components/data_ingestion.py file is basically used for data_ingestion.py fi
 
 ## Step 10 : Now we will work on the model_trainer part so for this we have to create a new file named as model_trainer.py in the src folder and then write all the code related to model trainer there.
 
+src/components/model_trainer.py  is used for model training and evaluation and also performed the hyperparameter tunning ..........
+- spliting in X_train,X_test , y_train and y_test 
+- r^2 square is used as performance matrix here . 
+- We have to select the best model which give us maximum value of r^2 value . ..................
+
 ## Step 11 : Hyper Parameter part of the Model is taking place in this step and we have made changes in src/utils.py file , src/components/data_ingestion.py and src/components/model_trainer.py files accordingly.
 
 ## Step 12 : Now we use flask to make an application and work on the predict_pipeline also and if we are using flask then we have to make templates folder too . 

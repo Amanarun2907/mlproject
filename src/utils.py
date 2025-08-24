@@ -26,22 +26,22 @@ def evaluate_models(X_train, y_train,X_test,y_test,models ,param):
             para=param[list(models.keys())[i]]
 
             gs = GridSearchCV(model,para,cv=3)
-            gs.fit(X_train,y_train)
+            gs.fit(X_train,y_train) ## model fitting 
 
-            model.set_params(**gs.best_params_)
-            model.fit(X_train,y_train)
+            model.set_params(**gs.best_params_) ## set the best parameters
+            model.fit(X_train,y_train) ## model fitting
 
             #model.fit(X_train, y_train)  # Train model
 
-            y_train_pred = model.predict(X_train)
+            y_train_pred = model.predict(X_train) ## predict the training data
 
-            y_test_pred = model.predict(X_test)
+            y_test_pred = model.predict(X_test) ## predict the testing data
 
-            train_model_score = r2_score(y_train, y_train_pred)
+            train_model_score = r2_score(y_train, y_train_pred) ## R Square score for training data
 
-            test_model_score = r2_score(y_test, y_test_pred)
+            test_model_score = r2_score(y_test, y_test_pred) ## R Square score for testing data
 
-            report[list(models.keys())[i]] = test_model_score
+            report[list(models.keys())[i]] = test_model_score 
 
         return report
 

@@ -1,7 +1,7 @@
 import os
 import sys
 from dataclasses import dataclass
-
+## CatboostRegressor , adaboostRegressor , GradientBoostingRegressor , RandomForestRegressor , LinearRegression , KNeighborsRegressor , DecisionTreeRegressor , XGBRegressor
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
     AdaBoostRegressor,
@@ -14,28 +14,28 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
 
-from src.exception import CustomException
-from src.log_config import logging
+from src.exception import CustomException ## exception handling 
+from src.log_config import logging ## logging 
  
-from src.utils import save_object,evaluate_models
+from src.utils import save_object,evaluate_models 
 
-@dataclass
+@dataclass ## decorator 
 class ModelTrainerConfig:
     trained_model_file_path=os.path.join("artifacts","model.pkl")
 
 class ModelTrainer:
     def __init__(self): ## constructor
-        self.model_trainer_config=ModelTrainerConfig()
+        self.model_trainer_config=ModelTrainerConfig() ## object of model trainer config class is created
 
 
-    def initiate_model_trainer(self,train_array,test_array):
+    def initiate_model_trainer(self,train_array,test_array): ## training and testing array is given as input to this function
         try:
             logging.info("Split training and test input data")
-            X_train,y_train,X_test,y_test=(
-                train_array[:,:-1],
-                train_array[:,-1],
-                test_array[:,:-1],
-                test_array[:,-1]
+            X_train,y_train,X_test,y_test=( ## use of tuple here . 
+                train_array[:,:-1], ## take out the last column and feed everything except the last column in X_train
+                train_array[:,-1], ## All the rows and last column only in y_train
+                test_array[:,:-1], ## take out the last column and feed everything except the last column in    X_test ...
+                test_array[:,-1]  ## All the rows and last column only in y_test
             )
             models = {
                 "Random Forest": RandomForestRegressor(),
@@ -85,16 +85,16 @@ class ModelTrainer:
             }
 
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,models=models,param=params)
-            
+            ## X_test , X_train , y_test , y_train , models names  and hyperparameter tunning parameters are passed to the evaluate_models function and it will return the model report in the form of dictionary
             ## To get best model score from dict
             best_model_score = max(sorted(model_report.values()))
 
             ## To get best model name from dict
 
             best_model_name = list(model_report.keys())[
-                list(model_report.values()).index(best_model_score)
+                list(model_report.values()).index(best_model_score) ## getting the index of the best model score
             ]
-            best_model = models[best_model_name]
+            best_model = models[best_model_name] ## best model is selected
 
             if best_model_score<0.6:
                 raise CustomException("No best model found")
