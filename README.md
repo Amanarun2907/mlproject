@@ -63,8 +63,11 @@ notebook/data/dataset
 
 ## Step 8 : Now here we have to work on the data ingestion part so for this we have to create a new file named as data_ingestion.py in the src folder and then write all the code related to data ingestion there.
 
+src/components/data_ingestion.py file is basically used for data_ingestion.py file and in this we have to basically read the dataset from various sources and doing the train test split part too for as 80 percent is training and 20 percent is testing so we have to do all these in data_ingestion.py file . 
+
 ## Step 9 : Now we will work on the data_transformation part so for this we have to create a new file named as data_transformation.py in the src folder and then write all the code related to data transformation there.
 
+- src/components/data_tranformation in which we basically first created a numerical pipeline and then we also created a categorical pipeline then we combined both of them and also handle the logging and custom exception too [imputer , column transformer , one hot encoding ......]
 
 ## Step 10 : Now we will work on the model_trainer part so for this we have to create a new file named as model_trainer.py in the src folder and then write all the code related to model trainer there.
 

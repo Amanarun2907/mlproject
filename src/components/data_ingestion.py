@@ -7,7 +7,7 @@ import pandas as pd ## pandas
 import numpy as np ## numpy
 from sklearn.model_selection import train_test_split ## actually we will divide the dataset in training and testing (80 % and 20% )
 from dataclasses import dataclass
-
+## importing some important functions from data_trainsformation . 
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
@@ -53,12 +53,13 @@ class DataIngestion:
             raise CustomException(e,sys)
         
 if __name__=="__main__":
+    ## dataIngestion object is created
     obj=DataIngestion()
     train_data,test_data=obj.initiate_data_ingestion() 
-
+   ## data transformation object is created
     data_transformation=DataTransformation()
     train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
-
+   ## model trainer object is created
     modeltrainer=ModelTrainer()
     print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
 
