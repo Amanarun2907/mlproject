@@ -15,9 +15,34 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
+
+
+
+
+
 # if __name__=="__main__":
 #     logging.info("Logging has started")
 
 
-# Logging in Python is a crucial practice for tracking events, debugging, and monitoring the behavior of applications. 
-# Python provides a built-in logging module in its standard library, offering a flexible and powerful framework for emitting log messages.
+
+
+# What is Logging in Python? (Simple Definition)
+# Logging in Python means recording messages about events that happen in your code. 
+# These messages help you keep track of what's going on while your program runs. It is useful for debugging, troubleshooting, and understanding the flow of your program
+
+
+# Example: Tracking Personal Expenses
+# Imagine you want to keep track of all the money you spend each day. You decide to write down every time you buy something, noting:
+
+# The date and time
+# What you bought
+# The amount spent
+
+# Your log might look like this in a notebook or phone:
+# Date	    Item	    Amount
+# 24-Aug-2025	Coffee	     ₹50
+# 24-Aug-2025	Bus ticket   ₹30
+# 24-Aug-2025	Movie ticket ₹150
+
+# This is a real-life "log." 
+# By doing this, you can later check where your money went, spot unnecessary spending, and plan your budget—just like how a computer program uses logging to monitor its own activities and errors.

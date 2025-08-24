@@ -71,3 +71,6 @@ notebook/data/dataset
 ## Step 11 : Hyper Parameter part of the Model is taking place in this step and we have made changes in src/utils.py file , src/components/data_ingestion.py and src/components/model_trainer.py files accordingly.
 
 ## Step 12 : Now we use flask to make an application and work on the predict_pipeline also and if we are using flask then we have to make templates folder too . 
+
+
+
