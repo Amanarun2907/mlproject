@@ -1,11 +1,12 @@
-from flask import Flask,request,render_template
+import pickle 
+from flask import Flask,request,render_template ## flask is a micro web framework written in python . 
 import numpy as np
 import pandas as pd
 
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler 
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
-application=Flask(__name__)
+application=Flask(__name__) ## entry point for the flask application
 
 app=application
 
@@ -13,12 +14,13 @@ app=application
 
 @app.route('/')
 def index():
-    return render_template('index.html') 
+    ## it will search for the template folder and then it will search for index.html file and it will render the index.html file
+    return render_template('index.html')  ## index.html file is in the template folder
 
 @app.route('/predictdata',methods=['GET','POST'])
-def predict_datapoint():
+def predict_datapoint(): ## this function is also used in home.html file . 
     if request.method=='GET':
-        return render_template('home.html')
+        return render_template('home.html') ## home.html file is in the template folder this file contains the simple input data field that our model is required to give  the prediction . 
     else:
         data=CustomData(
             gender=request.form.get('gender'),
@@ -29,12 +31,12 @@ def predict_datapoint():
             reading_score=float(request.form.get('writing_score')),
             writing_score=float(request.form.get('reading_score')))
         
-        pred_df=data.get_data_as_data_frame()
+        pred_df=data.get_data_as_data_frame() ## function is present in predict_pipeline.py file
         print(pred_df)
 
         predict_pipeline=PredictPipeline()
-        results=predict_pipeline.predict(pred_df)
-        return render_template('home.html',results=results[0])
+        results=predict_pipeline.predict(pred_df) ## transformation + prediction 
+        return render_template('home.html',results=results[0])  ## return statements 
     
     
 

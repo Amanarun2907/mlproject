@@ -51,7 +51,7 @@ def evaluate_models(X_train, y_train,X_test,y_test,models ,param):
     
 def load_object(file_path):
     try:
-        with open(file_path, "rb") as file_obj:
+        with open(file_path, "rb") as file_obj: ## rb is the read binary mode
             return dill.load(file_obj)
 
     except Exception as e:
