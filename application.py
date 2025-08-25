@@ -42,7 +42,7 @@ def predict_datapoint(): ## this function is also used in home.html file .
 
 if __name__=="__main__":      
     # app.run(host="0.0.0.0",port=80)   
-    app.run(debug=True)  # For development purposes, use debug=True
+    app.run(host="0.0.0.0")  # For development purposes, use debug=True
 
 
 # http://127.0.0.1:5000/predictdata
