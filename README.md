@@ -101,5 +101,5 @@ src/components/model_trainer.py and src/components/utils.py
 - using your details about repository and branch [integrate github with aws ]
 - select deploy provider as AWS elastic beanstalk 
 - in case you find problem in deployment just delete the app.py file . 
-
+- if you made some changes in github then please click on the release change .  
 ![1756101913719](image/README/1756101913719.png)
