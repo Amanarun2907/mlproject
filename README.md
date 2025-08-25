@@ -84,3 +84,22 @@ src/components/model_trainer.py and src/components/utils.py
 ## Step 12 : Now we use flask to make an application and work on the predict_pipeline also and if we are using flask then we have to make templates folder too . 
 
 - we have generated a web framework from flask and also make pipeline and connect every important file with each other so that connection should be stable . 
+
+
+## Step 13 : deployment  of my ml project using eleastic beanstalk aws management console 
+- go to AWS management console 
+- then select elastic beanstalk (linux machine) - - [python.config] file is created ..............
+- click on application 
+- click on create a new application 
+- give a application name
+- select platform as python 3.8
+- select application code as sample application . 
+- search for code pipeline in aws console management [release software using continous delivery ]
+- click on create a new pipeline 
+- name your pipeline
+- name source as github 
+- using your details about repository and branch [integrate github with aws ]
+- select deploy provider as AWS elastic beanstalk 
+- in case you find problem in deployment just delete the app.py file . 
+
+![1756101913719](image/README/1756101913719.png)
